@@ -1,0 +1,21 @@
+/* * {
+    background-color: blue;
+} */
+
+body {
+    background-color: #f1faee;
+}
+
+button {
+    font-size: 30px;
+    background-color: #a8dadc; 
+}
+
+#signup {
+    background-color: darkslateblue;
+}
+
+h1, h2 {
+    background-color: darkslateblue;
+    color: #fff;
+}
