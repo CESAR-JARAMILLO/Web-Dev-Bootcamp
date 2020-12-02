@@ -1,0 +1,27 @@
+div {
+    height: 200px;
+    width: 200px;
+}
+
+h1 {
+    background-color: pink;
+    width: 100px;
+}
+
+/* pixels are commonly used for borders */
+
+#one {
+    background-color: red;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    box-sizing: border-box; 
+}
+
+#two {
+    background-color: blue;
+}
+
+#three {
+    background-color: chartreuse;
+}
