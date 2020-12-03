@@ -1,0 +1,45 @@
+h1 {
+    background-color: darkturquoise;
+    border: 1px solid black;
+    display: inline;
+}
+
+/* block elements break the flow of a document */
+/* width, height, margin, padding are respected */
+
+span {
+    background-color: paleturquoise;
+    border: 1px solid black;
+    display: block;
+}
+
+/* width and height are ignored on a inline element */
+/* margin and padding push elements away horizontally not vertically */
+.one {
+    display: inline;
+    background-color: blueviolet;
+    border: 1px solid black;
+    width: 500px;
+    padding: 50px;
+    margin: 50px;
+}
+
+h2 {
+    background-color: chartreuse;
+    border: 1px solid black;
+    width: 300px;
+    padding: 50px;
+    margin: 100px;
+}
+
+/* inliune-block behave like an inline element */
+/* except width, height, padding, margin are respected */
+
+div {
+    height: 200px;
+    width: 200px;
+    background-color: olivedrab;
+    border: 5px solid black;
+    display: inline-block;
+    margin: 50px;
+}
