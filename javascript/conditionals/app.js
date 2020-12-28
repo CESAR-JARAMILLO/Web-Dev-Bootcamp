@@ -22,14 +22,29 @@
 //     console.log("You are an adult, you pay $20")
 // }
 
-const dayOfWeek = prompt("Enter a day").toLowerCase();
+// const dayOfWeek = prompt("Enter a day").toLowerCase();
 
-if (dayOfWeek === "monday"){
-    console.log("ughhh I hate Monday!!!")
-} else if (dayOfWeek === "saturday") {
-    console.log("Yay I love Saturday!")
-} else if (dayOfWeek === "friday"){
-    console.log("Finally it's Friday!")
+// if (dayOfWeek === "monday"){
+//     console.log("ughhh I hate Monday!!!")
+// } else if (dayOfWeek === "saturday") {
+//     console.log("Yay I love Saturday!")
+// } else if (dayOfWeek === "friday"){
+//     console.log("Finally it's Friday!")
+// } else {
+//     console.log("Meh")
+// }
+
+
+const password = prompt("please enter a new passord");
+
+if (password.length >= 6) {
+
+    if (password.indexOf(' ') === -1) {
+        console.log("Valid Password!")
+    } else {
+        console.log("Password cannot contain spaces")
+    }
+
 } else {
-    console.log("Meh")
+    console.log("PASSWORD TOO SHORT! Must be 6+ characters")
 }
