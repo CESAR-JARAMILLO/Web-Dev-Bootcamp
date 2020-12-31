@@ -27,15 +27,40 @@
 // console.log('Ok, you win!!!')
 
 
-let randomNum = Math.floor(Math.random() * 10 +1);
-let guess = prompt("Guess a number from  1-10!");
+// let randomNum = Math.floor(Math.random() * 10 +1);
+// let guess = prompt("Guess a number from  1-10!");
 
-while (true) {
-    if (guess === randomNum.toString()){
-        break;
-    } else {
-        guess = prompt(`The correct number was: ${randomNum}. Try again!`)
-        randomNum = Math.floor(Math.random() * 10 +1);
+// while (true) {
+//     if (guess === randomNum.toString()){
+//         break;
+//     } else {
+//         guess = prompt(`The correct number was: ${randomNum}. Try again!`)
+//         randomNum = Math.floor(Math.random() * 10 +1);
+//     }
+// }
+// console.log('Correct!')
+
+
+// Guessing Number Game
+
+let maximum = parseInt(prompt("Enter your maximum number!"));
+while (!maximum) {
+    maximum = parseInt(prompt("Enter a valid number!"));
+}
+
+const targetNum = Math.floor(Math.random() * maximum) + 1;
+console.log(targetNum)
+
+let numOfGuess = 1;
+let guess = parseInt(prompt("Enter your first guess!"));
+while (parseInt(guess) !== targetNum) {
+    if (guess === 'q') break;
+    numOfGuess++
+    if (guess < targetNum) {
+        guess = prompt("You are under! Try again!");
+    } else if (guess > targetNum) {
+        guess = prompt("You are over! Try again!");
     }
 }
-console.log('Correct!')
+
+prompt(`Congrats you guessesd correct in ${numOfGuess} tries!`);
