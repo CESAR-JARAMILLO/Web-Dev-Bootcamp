@@ -1,24 +1,21 @@
-let list = [];
-
-let menu = 0;
-while (menu !== "quit") {
-    menu = prompt("What would you like to do?");
+const list = [];
+let menu = prompt("What would you like to do?");
+while (menu !== "quit" && menu !== "q") {
     if (menu === "add") {
-        let response = prompt("Enter new todo.");
-        list.push(response)
+        const response = prompt("Enter new todo.");
+        list.push(response);
         console.log(`${response} added to todo.`)
     } else if (menu === "list") {
-        let index = 0;
         console.log("********")
-        for (let line of list) {
-            console.log(`${index}: ${line}`)
-            index++
+        for (let i = 0; i < list.length; i++) {
+            console.log(`${i}: ${list[i]}`)
         }
         console.log("********")
     } else if (menu === "delete") {
-        let deleteInd = parseInt(prompt("Enter a index to delete:"));
-        let deleted = list.splice(deleteInd, 1);
+        const deleteInd = parseInt(prompt("Enter a index to delete:"));
+        const deleted = list.splice(deleteInd, 1);
         console.log(`${deleted} has been deleted.`)
     }
+    menu = prompt("What would you like to do?");
 }
 console.log("You have chosen to quit.")
