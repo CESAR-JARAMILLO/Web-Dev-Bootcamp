@@ -33,9 +33,21 @@ function sum(num1, num2) {
     return num1 + num2;
 }
 
+
+// Returns the sum of an Array of numbers
 function sumArray(array) {
-    for (let i = 0; i < array.length; i++) {
-        let sum += array;
+    let total = 0;
+    for (let num of array) {
+        total += num;
     }
-    return sum;
+    return total;
+}
+
+const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+function returnDay(numDay) {
+    if (numDay < 1 || numDay > 7) {
+        return null;
+    }
+    return daysOfWeek[numDay - 1]
 }
