@@ -1,6 +1,11 @@
 const express = require('express');
-const app = express();
 const path = require('path');
+const mongoose = require('mongoose');
+
+// connects to mongo database
+mongoose.connect('mongodb://localhost:27017/yelp-camp')
+
+const app = express();
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'))
